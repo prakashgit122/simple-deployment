@@ -1,0 +1,27 @@
+pipeline {
+
+    agent any
+
+    stages {
+        stage("Checkout") {
+            steps {
+                git branch: 'main', url: 'https://github.com/prakashgit122/simple-deployment.git'
+            }
+        }
+        stage("Build") {
+            steps {
+                dir('project-2-jenkins-cicd') {
+                    sh 'test -f index.html'
+                    echo "Project 2 application validation successful"
+                }
+            }
+        }
+        stage("Deploy") {
+            steps {
+                dir('project-2-jenkins-cicd') {
+                    sh 'cp index.html /var/www/html'
+                }
+            }
+        }
+    }
+}
