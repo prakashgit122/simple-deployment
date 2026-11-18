@@ -57,7 +57,6 @@ simple-deployment/
     ├── index.html
     ├── Jenkinsfile
     ├── README.md
-    └── project-2-architecture.png
 ```
 
 ## Pipeline Stages
@@ -133,8 +132,6 @@ automatically. Checkout, Build, and Deploy all completed successfully.
 -   Deployed the application to Nginx on AWS EC2.
 -   Verified that a GitHub push triggered a Jenkins build automatically.
 -   Confirmed successful Checkout, Build, and Deploy stages.
-
-## Repository
 
 ------------------------------------------------------------------------
 
